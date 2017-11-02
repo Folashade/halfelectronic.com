@@ -16,26 +16,33 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-source-contentful`,
       options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 590,
-            },
-          },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
-          },
-          'gatsby-remark-prismjs',
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants',
-        ],
+        spaceId: `g1j45oe19wh0`,
+        accessToken: `804cfb4a7c7973acb081dbdf3f475aaad38bc7d2a16ca68f3b1a976f1a636d7f`,
       },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      // options: {
+      //   plugins: [
+      //     {
+      //       resolve: `gatsby-remark-images`,
+      //       options: {
+      //         maxWidth: 590,
+      //       },
+      //     },
+      //     {
+      //       resolve: `gatsby-remark-responsive-iframe`,
+      //       options: {
+      //         wrapperStyle: `margin-bottom: 1.0725rem`,
+      //       },
+      //     },
+      //     'gatsby-remark-prismjs',
+      //     'gatsby-remark-copy-linked-files',
+      //     'gatsby-remark-smartypants'
+      //   ],
+      // },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -59,5 +66,6 @@ module.exports = {
         fonts: [`Montserrat`, `Noto Serif`, `Varela Round`],
       },
     },
+
   ],
 }
