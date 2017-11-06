@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
   siteMetadata: {
     title: 'halfelectronic.com',
@@ -18,8 +20,8 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: `g1j45oe19wh0`,
-        accessToken: `804cfb4a7c7973acb081dbdf3f475aaad38bc7d2a16ca68f3b1a976f1a636d7f`,
+        spaceId: process.env.CONTENTFUL_SPACE_ID || '',
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || '',
       },
     },
     {
